@@ -15,3 +15,9 @@ This is a simple network traffic analysis tool written in Python that captures a
 Install dependencies using the following command:
 ```bash
 pip install -r requirements.txt
+
+Run the script to start capturing packets:
+sudo python traffic_analysis.py
+
+If you want to specify a network interface, you can modify the start_sniffing function in traffic_analysis.py to something like:
+start_sniffing(interface="eth0")  # Replace with your network interface name
