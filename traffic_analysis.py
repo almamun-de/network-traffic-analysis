@@ -23,4 +23,11 @@ def analyze_packet(packet):
         else:
             print("Other protocol detected.")
 
+# Start sniffing for network packets
+def start_sniffing(interface=None):
+    print(f"Starting packet sniffing on {interface}...")
+    sniff(iface=interface, prn=analyze_packet, store=False)
 
+if __name__ == "__main__":
+    # Modify this if you want to specify a network interface (e.g., "eth0", "wlan0")
+    start_sniffing(interface=None)  # By default, it'll sniff on all interfaces
